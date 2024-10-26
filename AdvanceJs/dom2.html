@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 2</title>
+</head>
+<body style="background-color: #212121; color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parentDocument = document.querySelector('.parent')
+    console.log("The value ", parentDocument);
+    console.log(parentDocument.children);
+    console.log(parentDocument.children[1].innerHTML);
+
+    for (let index = 0; index < parentDocument.children.length; index++) {
+        console.log(parentDocument
+        .children[index].innerHTML);
+    }
+    parentDocument.children[1].style.color = 'orange'
+    console.log(parentDocument.firstElementChild);
+    console.log(parentDocument.lastElementChild);
+
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne.innerHTML);
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextElementSibling.innerHTML);
+
+    console.log("Nodes: ",parentDocument.childNodes);
+    
+    
+    
+    
+    
+    
+</script>
+</html>
